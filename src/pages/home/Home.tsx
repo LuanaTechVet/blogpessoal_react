@@ -1,33 +1,30 @@
 function Home() { /*estrutura básica de um Componente Funcional do React*/
     return ( /*retornará o componente Home. Um Componente React é uma função JavaScript/TypeScript, que retorna código HTML e CSS*/
-        <> {/*Ao inserir mais de uma tag HTML, todo o código precisa estar envolvido pelo fragment (<> </>), que é um recurso do React, que permite agrupar uma lista de elementos filhos (Tags HTML) sem adicionar nós extras ao DOM */}
-            <div style={{/*inserido código CSS inline (dentro da tag HTML), nas 3 divs, utilizamos a propriedade style. Style retorna um Objeto, contendo um ou mais atributos, é então necessário utilizar o duplo par de chaves {{ }} para inserir as propriedades do CSS como atributos do Objeto Style*/
-                width: "100w",
-                display: "flex",
-                justifyContent:"center"
-            }}> {/* O primeiro par de chaves (externo) são para retornar uma variável, enquanto o segundo par de chaves (interno) são para criar o Objeto*/}
+        <> 
+            <div className="bg-indigo-900 flex justify-center">{/*Ao invés de utilizarmos a propriedade style(CSS), utilizamos a propriedade className*/}
+                <div className='container grid grid-cols-2 text-white'>
+                    <div className="flex flex-col gap-4 items-center justify-center py-4">
+                        <h2 className='text-5xl font-bold'>
+                            Seja Bem Vinde!
+                    </h2>
+                    <p className='text-xl'>
+                            Expresse aqui seus pensamentos e opniões
+                    </p>
 
-                <div>
-                    <div style={{
-                         width: "80vw",
-                         display: "flex",
-                         flexDirection: "column",
-                         alignItems: "center"
-                    }}>
-                        <h2>Seja Bem Vinde!</h2>
-                        <p>Expresse aqui seus pensamentos e opiniôes</p>
+                   <div className="flex justify-around gap-4">
+                            <div className='rounded text-white 
+                                            border-white border-solid border-2 py-2 px-4'
+                                >
+                                Nova Postagem
+                            </div>
+                        </div>
                     </div>
 
-                    <div style={{
-                         width: "80vw",
-                         display: "flex",
-                         flexDirection: "column",
-                         alignItems: "center"
-                    }}>
+                    <div className="flex justify-center ">
                         <img
-                            src="https://ik.imagekit.io/illaoi/thoughts.gif?updatedAt=1753379622319"
+                            src="https://ik.imagekit.io/illaoi/thoughts.gif?updatedAt=1753735050582"
                             alt="Imagem da páginag Home"
-                            width="400px"
+                            className='w-2/3'
                         />
                     </div>
                 </div>
