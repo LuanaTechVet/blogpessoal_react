@@ -5,10 +5,12 @@ import Home from './pages/home/Home'
 import './App.css'
 import Cadastro from './pages/cadastro/Cadastro'
 import Login from './pages/login/Login'
+import { AuthProvider } from './contexts/AuthContext'
 
 function App() {
   return (
     <>
+      <AuthProvider>
         <BrowserRouter>
           <Navbar /> {/*posição fixa, renderizado sem uma rota associada*/}
           <div className="min-h-[80vh]">
@@ -21,6 +23,7 @@ function App() {
           </div> {/* define a altura mínima padrão para todos os componentes renderizados com rota, garantindo que o Componente Footer permaneça no final da página*/}
           <Footer />{/*posição fixa, renderizado sem uma rota associada*/}
         </BrowserRouter>
+      </AuthProvider>
     </>
   )
 }
