@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-function-type */
 import axios from 'axios';
 
 const api = axios.create({
@@ -20,3 +21,18 @@ export const login = async (url: string, dados: object, setDados: Function) => {
   setDados(resposta.data);
 };
 //as duas funções têm escopos e propósitos similares, mas possuem responsabilidades diferentes
+
+export const buscar = async (url: string, setDados: Function, header: object) => {
+    const resposta = await api.get(url, header)
+    setDados(resposta.data)
+}
+
+export const cadastrar = async (url: string, dados: object, setDados: Function, header: object) => {
+    const resposta = await api.post(url, dados, header)
+    setDados(resposta.data)
+}
+
+export const atualizar = async (url: string, dados: object, setDados: Function, header: object) => {
+    const resposta = await api.put(url, dados, header)
+    setDados(resposta.data)
+}
