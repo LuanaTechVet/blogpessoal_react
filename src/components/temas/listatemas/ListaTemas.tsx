@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
-import { DNA } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import CardTemas from "../cardtemas/CardTemas";
 import { buscar } from "../../../services/Service";
 import type Tema from "../../../models/Tema";
+import { Hourglass } from "react-loader-spinner";
 
 function ListaTemas() {
 
@@ -42,15 +42,25 @@ function ListaTemas() {
     
     return (
         <>
-        {temas.length === 0 && ( //Sempre que esse tamanho mudar, a função buscarTemas() será executada
-            <DNA
-            visible={true}
-            height="200"
-            width="200"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper mx-auto"
-        />
+        {temas.length === 0 && (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center', // centraliza horizontalmente
+                alignItems: 'flex-start', // alinha no topo verticalmente
+                height: '100vh',          // ocupa a altura inteira da tela
+                paddingTop: '20px',       // distância do topo
+                }}>
+                <Hourglass
+                    visible={true}
+                    height="600"
+                    width="250"
+                    ariaLabel="hourglass-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    colors={['#4B0082', '#8A2BE2']}
+                />
+                </div>
+
         )}
             <div className="flex justify-center w-full my-4">
                 <div className="container flex flex-col">

@@ -8,14 +8,12 @@ const api = axios.create({
 export const cadastrarUsuario = async (
   url: string,
   dados: object, //dados do usuário no Corpo da Requisição POST
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   setDados: Function, //atualiza o Estado usuario (criado no Componente Cadastro)
 ) => {
   const resposta = await api.post(url, dados); //a Resposta da API será armazenada na variável resposta
   setDados(resposta.data); //data representa os dados recebidos no corpo da Resposta
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export const login = async (url: string, dados: object, setDados: Function) => {
   const resposta = await api.post(url, dados); //api é instância do Axios
   setDados(resposta.data);
@@ -35,4 +33,8 @@ export const cadastrar = async (url: string, dados: object, setDados: Function, 
 export const atualizar = async (url: string, dados: object, setDados: Function, header: object) => {
     const resposta = await api.put(url, dados, header)
     setDados(resposta.data)
+}
+
+export const deletar = async (url: string, header: object) => {
+    await api.delete(url, header)
 }
