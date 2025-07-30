@@ -22,7 +22,7 @@ function Home() { /*estrutura básica de um Componente Funcional do React*/
 
                     <div className="flex justify-center ">
                         <img
-                            src="https://ik.imagekit.io/illaoi/thoughts.gif?updatedAt=1753735050582"
+                            src="https://ik.imagekit.io/illaoi/thought%20fofo.gif?updatedAt=1753907940511"
                             alt="Imagem da páginag Home"
                             className='w-2/3'
                         />
