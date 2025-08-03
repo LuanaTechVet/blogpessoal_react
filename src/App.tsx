@@ -9,6 +9,10 @@ import { AuthProvider } from './contexts/AuthContext'
 import ListaTemas from './components/temas/listatemas/ListaTemas'
 import FormTema from './components/temas/formtema/FormTema'
 import DeletarTema from './components/temas/deletartema/DeletarTema'
+import ListaPostagens from './components/postagens/listapostagens/ListaPostagens'
+import FormPostagem from './components/postagens/formpostagem/FormPostagem'
+import DeletarPostagem from './components/temas/deletarpostagem/DeletarPostagem'
+import Perfil from './pages/perfil/Perfil'
 
 function App() {
   return (
@@ -26,6 +30,11 @@ function App() {
               <Route path="/cadastrartema" element={<FormTema />} />
               <Route path="/editartema/:id" element={<FormTema />} />
               <Route path="/deletartema/:id" element={<DeletarTema />} />
+              <Route path="/postagens" element={<ListaPostagens />} />
+              <Route path="/cadastrarpostagem" element={<FormPostagem />} />
+              <Route path="/editarpostagem/:id" element={<FormPostagem />} />
+              <Route path="/deletarpostagem/:id" element={<DeletarPostagem />} />
+              <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div> {/* define a altura mínima padrão para todos os componentes renderizados com rota, garantindo que o Componente Footer permaneça no final da página*/}
           <Footer />{/*posição fixa, renderizado sem uma rota associada*/}

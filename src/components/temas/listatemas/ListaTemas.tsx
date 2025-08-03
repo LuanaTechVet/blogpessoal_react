@@ -10,11 +10,11 @@ import { Hourglass } from "react-loader-spinner";
 
 function ListaTemas() {
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(); //redireciona de um Componente para outro, através das rotas definidas no Componente App
 
     const [temas, setTemas] = useState<Tema[]>([])
 
-    const { usuario, handleLogout } = useContext(AuthContext)
+    const { usuario, handleLogout } = useContext(AuthContext) //hook useContext informa qual o contexto que ele deve acessar. Através de desestruturação foi possível selecionar apenas as propriedades usuario (usuário autenticado) e handleLogout e atribui-las a variáveis com o mesmo nome
     const token = usuario.token
 
     async function buscarTemas() {
@@ -38,7 +38,7 @@ function ListaTemas() {
 
     useEffect(() => {
         buscarTemas()    
-    }, [buscarTemas, temas.length])
+    }, [buscarTemas, temas.length]) //Sempre que esse tamanho mudar, a função buscarTemas() será executada. Garante que a lista de temas do Componente ListaTemas seja atualizada automaticamente sempre que houver alguma mudança no número de temas
     
     return (
         <>

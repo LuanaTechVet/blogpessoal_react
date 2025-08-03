@@ -1,69 +1,64 @@
-# React + TypeScript + Vite
+# Blog Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-blue)
+![GitHub license](https://img.shields.io/github/license/LuanaTechVet/blogpessoal)
 
-Currently, two official plugins are available:
+## 📋 Descrição do projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Blog Pessoal desenvolvido em React + TypeScript, com autenticação, cadastro de usuários, CRUD de postagens e temas, integração com backend em NestJS e estilização com TailwindCSS.
 
-## Expanding the ESLint configuration
+## :dart: Objetivo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Permitir que usuários publiquem, editem e visualizem postagens, além de gerenciar temas, com autenticação e interface responsiva.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## :hammer: Funcionalidades
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Cadastro e login de usuários
+- Autenticação com token JWT
+- CRUD de postagens
+- CRUD de temas
+- Visualização de perfil
+- Feedback visual com loaders
+- Interface responsiva
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## :rocket: Tecnologias utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React Router DOM](https://reactrouter.com/)
+- [Axios](https://axios-http.com/)
+- [React Loader Spinner](https://mhnpd.github.io/react-loader-spinner/)
+- [Phosphor Icons](https://phosphoricons.com/)
+- [NestJS (backend)](https://nestjs.com/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## :construction: Como rodar o projeto
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/LuanaTechVet/blogpessoal.git
+   ```
+2. Instale as dependências:
+   ```sh
+   npm install
+   ```
+3. Inicie o projeto:
+   ```sh
+   npm run dev
+   ```
+4. Acesse em [http://localhost:5173](http://localhost:5173)
+
+> ⚠️ Certifique-se de que o backend está rodando e acessível em `https://blogpessoal-nest-ch67.onrender.com`.
+
+## :busts_in_silhouette: Contribuidores
+
+- [Luana Silva](https://github.com/LuanaTechVet)
+
+## :page_facing_up: Licença
+
+Este projeto está sob licença MIT. Veja em [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+<p align="center">Desenvolvido por mim com orientação da Generation Brasil 💙
